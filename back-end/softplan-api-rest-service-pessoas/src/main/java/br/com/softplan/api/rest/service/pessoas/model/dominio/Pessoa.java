@@ -61,6 +61,11 @@ public class Pessoa extends AbstractEntity {
     @Column(name = "nacionalidade")
     private String nacionalidade;
 
+    @NotBlank(message = "Endereço inválido! Insira um Endereço válido (preenchido) para a Pessoa.")
+    @NotNull(message = "Endereço inválido! Insira um Endereço válido (preenchido) para a Pessoa.")
+    @Size(max = 200, message = "Endereço inválido! Ultrapassa o limite do valor permitido igual à 500 caracteres.")
+    private String endereco;
+
     @JsonIgnore
     @Transient
     private String conteudoJson;

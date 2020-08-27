@@ -12,7 +12,7 @@
 
     <groupId>br.com.softplan.api.rest.service.pessoas</groupId>
     <artifactId>softplan-api-rest-service-pessoas</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>softplan-api-rest-service-pessoas</name>
     <description>Project em SpringBoot API RestTemplate/RestFUL CRUD Pessoas</description>
 

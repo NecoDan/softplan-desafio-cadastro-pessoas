@@ -79,6 +79,7 @@ public class PessoaService implements IPessoaService {
         p.setEmail((Objects.isNull(pessoaParam.getEmail()) || pessoaParam.getEmail().isEmpty()) ? p.getEmail() : pessoaParam.getEmail());
         p.setNaturalidade((Objects.isNull(pessoaParam.getNaturalidade()) || pessoaParam.getNaturalidade().isEmpty()) ? p.getNaturalidade() : pessoaParam.getNaturalidade());
         p.setNacionalidade((Objects.isNull(pessoaParam.getNacionalidade()) || pessoaParam.getNacionalidade().isEmpty()) ? p.getNacionalidade() : pessoaParam.getNacionalidade());
+        p.setEndereco((Objects.isNull(pessoaParam.getEndereco()) || pessoaParam.getEndereco().isEmpty()) ? p.getEndereco() : pessoaParam.getEndereco());
         p.setDataCadastro(LocalDateTime.now());
         p.ativado();
         return p;

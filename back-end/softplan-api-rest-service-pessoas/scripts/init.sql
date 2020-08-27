@@ -13,6 +13,7 @@ create table if not exists softplan_services.sp01_pessoa
     naturalidade  varchar(200)      default null,
     nacionalidade varchar(200)      default null,
     tipo_sexo     char              default null,
+    endereco      varchar(500) not null,
     dt_cadastro   timestamp         default now() not null,
     ativo         bool         null default true,
     primary key (id)
@@ -64,7 +65,7 @@ alter table softplan_services.sp02_log_pessoa
 alter table softplan_services.sp02_log_pessoa
     owner to postgres;
 
---////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 insert into softplan_services.sp03_tipo_operacao_log (id, descricao)
 values (1, 'CREATE');

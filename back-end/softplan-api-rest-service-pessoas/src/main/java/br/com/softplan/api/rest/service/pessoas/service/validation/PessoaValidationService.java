@@ -15,7 +15,7 @@ public class PessoaValidationService implements IPessoaValidationService {
         if (Objects.isNull(pessoa))
             throw new ServiceException("Pessoa encontra-se inválida e/ou inexistente {NULL}. Nenhuma referência do objeto {PESSOA} localizada.");
     }
-// //    @NotBlank(message = "CPF inválido! Insira um valor referente ao CPF válido para a pessoa.")
+
     @Override
     public void validarPessoa(Pessoa pessoa) throws ServiceException {
         validarSomentePessoaIsValida(pessoa);
@@ -25,5 +25,8 @@ public class PessoaValidationService implements IPessoaValidationService {
 
         if (!CpfUtil.isCPFValido(pessoa.getCpf()))
             throw new ServiceException("CPF referente à {Pessoa}, encontra-se inválido. Não é um CPF válido e aceitável. Insira um CPF e tente novamente");
+
+        if (Objects.isNull(pessoa.getEndereco()) || pessoa.getEndereco().isEmpty())
+            throw new ServiceException("Endereço referente à {Pessoa}, encontra-se inexistente {NULL} e/ou inválido (vazio). Insira um Endereço e tente novamente");
     }
 }

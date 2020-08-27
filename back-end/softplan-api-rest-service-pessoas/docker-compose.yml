@@ -1,10 +1,10 @@
 version: "3.5"
 services:
-  postgres:
-    image: postgres
-    container_name: postgres
+  postgresv2:
+    image: postgres:9.3
+    container_name: postgresv2
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - postgres-datav2:/var/lib/postgresql/data
       - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
     expose:
       - "5432"
@@ -16,16 +16,16 @@ services:
       - POSTGRES_DB=postgres
   # APP*******************************************************************
   springbootapp:
-    image: softplan-api-rest-service-pessoas:latest
+    image: softplan-api-rest-service-pessoas-v2:latest
     build: ./
-    container_name: softplan-api-rest-service-pessoas
+    container_name: softplan-api-rest-service-pessoas-v2
     expose:
       - "8080"
     ports:
       - "8080:8080"
     depends_on:
-      - postgres
+      - postgresv2
     links:
-      - postgres
+      - postgresv2
 volumes:
-  postgres-data:
+  postgres-datav2:
