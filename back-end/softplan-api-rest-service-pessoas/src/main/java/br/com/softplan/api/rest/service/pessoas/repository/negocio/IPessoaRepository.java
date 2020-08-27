@@ -1,6 +1,6 @@
-package br.com.softplan.api.rest.service.pessoas.repository;
+package br.com.softplan.api.rest.service.pessoas.repository.negocio;
 
-import br.com.softplan.api.rest.service.pessoas.model.Pessoa;
+import br.com.softplan.api.rest.service.pessoas.model.dominio.Pessoa;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

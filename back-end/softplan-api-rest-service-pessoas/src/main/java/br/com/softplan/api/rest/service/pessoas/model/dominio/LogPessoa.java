@@ -1,4 +1,4 @@
-package br.com.softplan.api.rest.service.pessoas.model;
+package br.com.softplan.api.rest.service.pessoas.model.dominio;
 
 import br.com.softplan.api.rest.service.pessoas.util.domain.AbstractEntity;
 import com.fasterxml.jackson.annotation.JsonFormat;

@@ -1,6 +1,6 @@
-package br.com.softplan.api.rest.service.pessoas.service;
+package br.com.softplan.api.rest.service.pessoas.service.negocio;
 
-import br.com.softplan.api.rest.service.pessoas.model.Pessoa;
+import br.com.softplan.api.rest.service.pessoas.model.dominio.Pessoa;
 import br.com.softplan.api.rest.service.pessoas.util.exceptions.ServiceException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

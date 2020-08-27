@@ -1,4 +1,4 @@
-package br.com.softplan.api.rest.service.pessoas.model;
+package br.com.softplan.api.rest.service.pessoas.model.enums;
 
 import java.util.EnumSet;
 import java.util.HashMap;

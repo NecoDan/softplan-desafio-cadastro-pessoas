@@ -1,4 +1,4 @@
-package br.com.softplan.api.rest.service.pessoas.config;
+package br.com.softplan.api.rest.service.pessoas.config.geral;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

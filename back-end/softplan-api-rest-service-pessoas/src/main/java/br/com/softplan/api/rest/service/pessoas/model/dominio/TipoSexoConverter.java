@@ -1,4 +1,6 @@
-package br.com.softplan.api.rest.service.pessoas.model;
+package br.com.softplan.api.rest.service.pessoas.model.dominio;
+
+import br.com.softplan.api.rest.service.pessoas.model.enums.TipoSexo;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

@@ -1,5 +1,6 @@
-package br.com.softplan.api.rest.service.pessoas.model;
+package br.com.softplan.api.rest.service.pessoas.model.dominio;
 
+import br.com.softplan.api.rest.service.pessoas.model.enums.TipoOperacaoLogEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;

@@ -1,10 +1,10 @@
-package br.com.softplan.api.rest.service.pessoas.service;
+package br.com.softplan.api.rest.service.pessoas.service.negocio;
 
-import br.com.softplan.api.rest.service.pessoas.model.LogPessoa;
-import br.com.softplan.api.rest.service.pessoas.model.Pessoa;
-import br.com.softplan.api.rest.service.pessoas.model.TipoOperacaoLog;
-import br.com.softplan.api.rest.service.pessoas.model.TipoOperacaoLogEnum;
-import br.com.softplan.api.rest.service.pessoas.repository.ILogPessoaRepository;
+import br.com.softplan.api.rest.service.pessoas.model.dominio.LogPessoa;
+import br.com.softplan.api.rest.service.pessoas.model.dominio.Pessoa;
+import br.com.softplan.api.rest.service.pessoas.model.dominio.TipoOperacaoLog;
+import br.com.softplan.api.rest.service.pessoas.model.enums.TipoOperacaoLogEnum;
+import br.com.softplan.api.rest.service.pessoas.repository.negocio.ILogPessoaRepository;
 import br.com.softplan.api.rest.service.pessoas.util.exceptions.ServiceException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
