@@ -1,5 +1,10 @@
 package br.com.softplan.api.rest.service.pessoas.util;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
@@ -24,5 +29,12 @@ public final class FormatterUtil {
 
     public static String toStringLocalDateFormatada(LocalDate data) {
         return toStringLocalDateFormatadaPor(data, "dd/MM/yyyy");
+    }
+
+    public static String formatConteudoJSONFrom(String conteudo) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(conteudo);
+        return gson.toJson(je);
     }
 }
