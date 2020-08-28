@@ -118,7 +118,7 @@ public class PessoaService implements IPessoaService {
             this.logPessoaService.salvarLogAuditoriaTransacaoPessoaAoDeletar(conteudoJson, TipoOperacaoLogEnum.DELETE);
             return true;
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            log.info(e.getLocalizedMessage());
         }
 
         return false;
