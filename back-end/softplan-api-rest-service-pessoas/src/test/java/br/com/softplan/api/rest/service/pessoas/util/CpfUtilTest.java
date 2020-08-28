@@ -1,11 +1,13 @@
 package br.com.softplan.api.rest.service.pessoas.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+@Slf4j
 public class CpfUtilTest {
 
     @Before
@@ -14,27 +16,27 @@ public class CpfUtilTest {
 
     @Test
     public void deveValidarCpfEstahValidoERetornarVerdade() {
-        System.out.println("#TEST: deveValidarCpfEstahValidoERetornarVerdade: ");
+        log.info("#TEST: deveValidarCpfEstahValidoERetornarVerdade: ");
 
         // -- 01_Cenário
         String cpf = GeraCpfUtil.cpf(true);
-        System.out.println("CPF: ".concat(cpf));
+        log.info("CPF: ".concat(cpf));
 
         // -- 02_Ação && -- 03_Verificacao-Validacao
         assertTrue(CpfUtil.isCPFValido(cpf));
-        System.out.println("-------------------------------------------------------------");
+        log.info("-------------------------------------------------------------");
     }
 
     @Test
     public void deveValidarCpfEstahValidoERetornarFalso() {
-        System.out.println("#TEST: deveValidarCpfEstahValidoERetornarFalso: ");
+        log.info("#TEST: deveValidarCpfEstahValidoERetornarFalso: ");
 
         // -- 01_Cenário
         String cpf = String.valueOf(RandomicoUtil.gerarValorRandomicoLong());
-        System.out.println("CPF: ".concat(cpf));
+        log.info("CPF: ".concat(cpf));
 
         // -- 02_Ação && -- 03_Verificacao-Validacao
         assertFalse(CpfUtil.isCPFValido(cpf));
-        System.out.println("-------------------------------------------------------------");
+        log.info("-------------------------------------------------------------");
     }
 }
